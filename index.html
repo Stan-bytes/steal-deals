@@ -1,225 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Steal Deals – Top Game Discounts</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steal Deals — Top Game Discounts</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0d0d0d;
+      color: #e0e0e0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+    }
 
-<style>
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0e0e10;
-    color: #f5f5f5;
-    line-height: 1.6;
-  }
+    /* HERO SECTION */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      color: white;
+    }
 
-  header {
-    background: linear-gradient(135deg, #111 0%, #191919 50%, #111 100%);
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom: 2px solid #1f1f1f;
-    box-shadow: 0 0 25px #111;
-  }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/214950/header.jpg"),
+                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/364360/header.jpg"),
+                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/594570/header.jpg"),
+                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/779340/header.jpg"),
+                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/2290180/header.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      filter: brightness(0.4) blur(6px);
+      transform: scale(1.1);
+      z-index: 0;
+    }
 
-  header h1 {
-    font-size: 2.5em;
-    color: #00ffff;
-    text-shadow: 0 0 8px #00ffff, 0 0 15px #0077ff;
-  }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
 
-  header p {
-    color: #ccc;
-    font-size: 1.1em;
-  }
+    .hero h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    }
 
-  .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
-  }
+    .hero p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: #ccc;
+    }
 
-  .game-card {
-    background: #161616;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 40px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-  }
+    /* MAIN CONTENT */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-  .game-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
-  }
+    .post {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    }
 
-  .game-card h2 {
-    color: #00ffff;
-    font-size: 1.6em;
-    text-shadow: 0 0 10px #00ffff60;
-  }
+    .post img {
+      width: 100%;
+      border-radius: 6px;
+    }
 
-  .game-card img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 8px;
-    margin: 10px 0;
-  }
+    h2 {
+      color: #fff;
+      margin-top: 1em;
+    }
 
-  .game-card a {
-    color: #00bfff;
-    text-decoration: none;
-    font-weight: bold;
-  }
+    a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-  .game-card a:hover {
-    text-decoration: underline;
-  }
+    a:hover {
+      text-decoration: underline;
+    }
 
-  .footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #1f1f1f;
-    color: #777;
-    margin-top: 50px;
-    font-size: 0.9em;
-  }
+    del {
+      color: #777;
+    }
 
-  .footer strong {
-    color: #ff0066;
-  }
+    .footer {
+      text-align: center;
+      color: #888;
+      margin-top: 60px;
+      padding-bottom: 40px;
+    }
 
-  del {
-    color: #888;
-  }
-</style>
+    hr {
+      border: none;
+      border-top: 1px solid #333;
+      margin: 40px 0;
+    }
+  </style>
 </head>
-
 <body>
-  <header>
-    <h1>🎮 Top Steal Deals Right Now</h1>
-    <p>Updated on October 14, 2025 • The best bang for your buck, no ads – just pure gaming.</p>
-  </header>
+  <!-- HERO HEADER -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Top Steal Deals Right Now</h1>
+      <p>Updated October 14, 2025 • Gamer-curated savings • No ads. No nonsense.</p>
+    </div>
+  </section>
 
-  <div class="container">
+  <!-- CONTENT SECTION -->
+  <div class="content">
+    <div class="post">
+      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/214950/header.jpg" alt="Total War Rome II Emperor Edition Cover">
+      <h2>Total War Rome II Emperor Edition</h2>
+      <p><strong>Price:</strong> $11.99 <del>$59.99</del> (80% off)</p>
+      <p><strong>Rating:</strong> Steam Rating: 85% (Very Positive)</p>
+      <p>Step into the epic world of ancient Rome with <em>Total War Rome II Emperor Edition</em>. Command armies, build cities, and conquer empires in this award-winning strategy game. Get it now at 80% off for only $11.99 on Steam.</p>
+      <p><a href="https://www.cheapshark.com/redirect?dealID=CogdN2fzrvlYoaYTfNFh2R%2FW2g12PbMnQhVIaexCHd8%3D" target="_blank">Buy now on Humble Store →</a></p>
+    </div>
 
-    <!-- START OF GAME ENTRIES -->
-    <div class="game-card">
-      
-        <div style="margin-bottom: 40px;">
-            <h2>Total War Rome II Emperor Edition</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=CogdN2fzrvlYoaYTfNFh2R%2FW2g12PbMnQhVIaexCHd8%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/214950/header.jpg" alt="Total War Rome II Emperor Edition Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $11.99 <del>$59.99</del> (80% off)</p>
-            <p><strong>Rating:</strong> Steam Rating: 85% (Very Positive)</p>
-            <p>Step into the epic world of ancient Rome with Total War Rome II Emperor Edition. Command armies, build cities, and conquer empires in this award-winning strategy game. Get it now at 80% off for only $11.99 on Steam. Join the thousands of players who love the game, with a very positive rating of 85%. Don't miss out on this epic deal!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=CogdN2fzrvlYoaYTfNFh2R%2FW2g12PbMnQhVIaexCHd8%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Total War: WARHAMMER</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=7dylraBEoXslWdFzGRmDukk68g2svCURUkINBtfAEy0%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/364360/header.jpg" alt="Total War: WARHAMMER Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 86/100</p>
-            <p>Enter a world of strategy and fantasy with Total War: WARHAMMER. With a Metacritic score of 86/100, dive into epic battles and command powerful armies. Don't miss out on the sale price of $14.99, 75% off the original. Lead your forces to victory today!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=7dylraBEoXslWdFzGRmDukk68g2svCURUkINBtfAEy0%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Total War: WARHAMMER II</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=Ga%2FbXlOHiqWeqozFQEeIatwmUlnEv%2BeSf5jqPu9optc%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/594570/header.jpg" alt="Total War: WARHAMMER II Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 87/100</p>
-            <p>Embark on epic battles and conquer the fantasy world in Total War: WARHAMMER II. With stunning graphics and a deep strategy gameplay, this game is a must-have for strategy enthusiasts. Get it now for only $14.99 and save 75%! Metacritic Score: 87/100. Don't miss out on this epic deal!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=Ga%2FbXlOHiqWeqozFQEeIatwmUlnEv%2BeSf5jqPu9optc%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Total War: THREE KINGDOMS</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=lXt3D9Thp3gr4dvEFIL0kf%2FTtiDUIIKW0%2FCKCgzHv5c%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/779340/header.jpg" alt="Total War: THREE KINGDOMS Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 85/100</p>
-            <p>Unleash your strategic prowess in Total War: THREE KINGDOMS. Command legendary warriors, forge alliances, and conquer ancient China in this critically acclaimed game. With a Metacritic score of 85/100, immerse yourself in epic battles for only $14.99 - 75% off the original price! Dominate the battlefield and rewrite history today!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=lXt3D9Thp3gr4dvEFIL0kf%2FTtiDUIIKW0%2FCKCgzHv5c%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Riders Republic</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=dk75xRfZ1e%2BzNhcZ3Vr0a%2Fkno2ZK24QrgDKoT9xmXmo%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2290180/header.jpg" alt="Riders Republic Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $10.00 <del>$39.99</del> (74% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
-            <p>Experience the thrill of extreme sports in Riders Republic! Dominate massive multiplayer races and challenges across a stunning open world playground. With a Metacritic Score of 78/100, this adrenaline-pumping game is now on sale for just $10.00 - don't miss out on saving 74% off the original price!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=dk75xRfZ1e%2BzNhcZ3Vr0a%2Fkno2ZK24QrgDKoT9xmXmo%3D" target="_blank">Buy now on GreenManGaming</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Songs of Conquest</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=9BubrHHW%2FFEQ7%2Bz1f%2F0wyDA0vXA7Zst5VJaRMBFiXfI%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/867210/header.jpg" alt="Songs of Conquest Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $10.49 <del>$34.99</del> (70% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
-            <p>Embark on an epic musical journey with Songs of Conquest! Command armies, conquer lands, and unravel mysteries in this critically acclaimed strategy game. With a Metacritic score of 78/100, experience the thrill of victory for only $10.49 - 70% off the original price. Don't miss out on this limited-time offer!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=9BubrHHW%2FFEQ7%2Bz1f%2F0wyDA0vXA7Zst5VJaRMBFiXfI%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Shadow Warrior 3</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=PGovWlbJPNEEXokxsGL2mZe8b4fdeN00HPoSvEqMGfw%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/None/header.jpg" alt="Shadow Warrior 3 Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $11.99 <del>$39.99</del> (70% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 71/100</p>
-            <p>Step into the shoes of the modern ninja, Lo Wang, in the epic battle against a powerful ancient god in Shadow Warrior 3. With fast-paced action, stunning visuals, and intense combat, this game is a must-play for fans of the series. Now on sale for $11.99, don't miss out on this thrilling adventure at 70% off!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=PGovWlbJPNEEXokxsGL2mZe8b4fdeN00HPoSvEqMGfw%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Mega Man Battle Network Legacy Collection (Vol.1 and Vol.2)</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=e4NlGvBUDhRe6FopkekOddW8EcC6DXB1roCW%2BZsOmq4%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/794039/header.jpg" alt="Mega Man Battle Network Legacy Collection (Vol.1 and Vol.2) Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $19.79 <del>$59.99</del> (67% off)</p>
-            <p><strong>Rating:</strong> Steam Rating: 87% (Very Positive)</p>
-            <p>Immerse yourself in the retro-futuristic world of Mega Man Battle Network Legacy Collection! Featuring Vol.1 and Vol.2, snag this epic bundle for only $19.79 (67% off). With a Steam rating of 87% (Very Positive), now is the perfect time to experience the classic battles and thrilling adventures of Mega Man. Don't miss out on this nostalgic deal!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=e4NlGvBUDhRe6FopkekOddW8EcC6DXB1roCW%2BZsOmq4%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>System Shock</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=Y%2FrHBfY1aVL4vpTQth85SJ3QVSHX2JVxMjv2RGn%2B8C0%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/482400/header.jpg" alt="System Shock Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $13.99 <del>$39.99</del> (65% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
-            <p>Immerse yourself in the acclaimed sci-fi classic 'System Shock' for only $13.99 (65% off)! Uncover a thrilling narrative, challenging gameplay, and innovative mechanics that have earned a Metacritic Score of 78/100. Don't miss out on this amazing deal!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=Y%2FrHBfY1aVL4vpTQth85SJ3QVSHX2JVxMjv2RGn%2B8C0%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-        
-        <div style="margin-bottom: 40px;">
-            <h2>Classified: France 44</h2>
-            <a href="https://www.cheapshark.com/redirect?dealID=hldSIf31lAbKHt7mLeP5ne3VKDYaFsmtqRoJCtbSPRE%3D" target="_blank">
-                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2085370/header.jpg" alt="Classified: France 44 Cover" style="width:500px;">
-            </a>
-            <p><strong>Price:</strong> $13.99 <del>$34.99</del> (60% off)</p>
-            <p><strong>Rating:</strong> Metacritic Score: 75/100</p>
-            <p>Embark on a thrilling covert mission in 'Classified: France 44' - now only $13.99! With a Metacritic score of 75/100, this action-packed game puts you in the heart of World War II espionage. Hurry, save 60% off the original price of $34.99 and immerse yourself in the ultimate undercover adventure today!</p>
-            <p><a href="https://www.cheapshark.com/redirect?dealID=hldSIf31lAbKHt7mLeP5ne3VKDYaFsmtqRoJCtbSPRE%3D" target="_blank">Buy now on Humble Store</a></p>
-        </div>
-
-  <div class="footer">
     <hr>
-    <p><strong>Ads ruin experiences. Ban ads, not fun.</strong></p>
+    <div class="footer">
+      <p><strong>Ads ruin experiences. Ban ads, not fun.</strong></p>
+    </div>
   </div>
 </body>
 </html>
-
