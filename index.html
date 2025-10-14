@@ -9,14 +9,6 @@
 <title>Steal Deals — Top Game Discounts</title>
 <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #f5f5f5; margin: 0; padding: 0; }
-    .hero-collage { position: relative; width: 100%; overflow: hidden; }
-    .collage { position: relative; display: flex; height: 55vh; max-height: 550px; }
-    .collage img { flex: 1; width: 33.33%; object-fit: cover; filter: brightness(70%) contrast(110%); transition: transform 0.3s ease-in-out; }
-    .collage img:hover { transform: scale(1.05); }
-    .overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.85)); z-index: 2; }
-    .hero-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; z-index: 3; }
-    .hero-text h1 { font-size: 2.8em; color: #ff4655; margin-bottom: 0.4em; text-shadow: 2px 2px 10px #000; }
-    .hero-text p { font-size: 1.1em; color: #ddd; }
     main { padding: 1.5em; max-width: 900px; margin: auto; }
     .update-date { text-align: center; margin-bottom: 1em; color: #bbb; }
     .post { background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 1.2em; margin-bottom: 1.5em; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); }
@@ -28,21 +20,27 @@
     p { line-height: 1.5em; }
     footer { text-align: center; padding: 2em 1em; font-size: 0.9em; color: #999; border-top: 1px solid #333; background-color: #0f0f0f; }
     footer strong { color: #ff4655; }
+    .header-video-container { position: relative; width: 100%; height: 300px; overflow: hidden; border-radius: 12px; margin-bottom: 1em; }
+    .header-video-container video { width: 100%; height: 100%; object-fit: cover; }
+    .header-overlay { position: absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:white; text-align:center; z-index:2; }
+    .header-overlay h1 { font-size:2.5em; text-shadow:2px 2px 10px #000; margin:0; color:#ff4655; }
+    .header-overlay p { font-size:1.1em; color:#ddd; margin:0.3em 0 0 0; }
 </style>
 </head>
 <body>
-<header class="hero-collage">
-<div class="collage">
-    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/594570/header.jpg" alt="Top Rated Game 1">
-    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/482400/header.jpg" alt="Top Rated Game 2">
-    <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/794039/header.jpg" alt="Top Rated Game 3">
-    <div class="overlay"></div>
-    <div class="hero-text">
+
+<!-- Header Gameplay Video -->
+<header class="header-video-container">
+    <video autoplay loop muted playsinline poster="https://cdn.cloudflare.steamstatic.com/steam/apps/214950/header.jpg">
+        <source src="header_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="header-overlay">
         <h1>Top Steal Deals Right Now</h1>
         <p>Updated on October 14, 2025</p>
     </div>
-</div>
 </header>
+
 <main>
 
 <div class="post">
@@ -52,7 +50,7 @@
     </a>
     <p><strong>Price:</strong> $11.99 <del>$59.99</del> (80% off)</p>
     <p><strong>Rating:</strong> Steam Rating: 85% (Very Positive)</p>
-    <p>Experience the grandeur of ancient Rome in Total War Rome II Emperor Edition! Lead your empire to victory in epic battles with strategic gameplay. Now on sale for only $11.99, grab your copy today and join the thousands of satisfied players with a Steam Rating of 85% (Very Positive). Don't miss out on this incredible 80% discount!</p>
+    <p>Experience the epic battles of ancient Rome in Total War Rome II Emperor Edition - now on sale for $11.99! Command your armies, build your empire, and conquer your enemies in this critically acclaimed strategy game. With an 85% (Very Positive) rating on Steam, don't miss out on this 80% off deal!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=CogdN2fzrvlYoaYTfNFh2R%2FW2g12PbMnQhVIaexCHd8%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -63,7 +61,7 @@
     </a>
     <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 86/100</p>
-    <p>Experience epic battles and strategic conquest in Total War: WARHAMMER. Command powerful armies, dominate the battlefield, and unleash magical abilities in this critically acclaimed game. Now on sale for only $14.99, with a Metacritic score of 86/100. Don't miss out on this amazing deal!</p>
+    <p>Embark on epic battles with legendary factions in Total War: WARHAMMER. Command powerful armies, cast spells, and conquer the fantasy world of Warhammer. With a Metacritic score of 86/100, get it now for just $14.99 - that's 75% off the original price of $59.99. Don't miss out on this epic deal!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=7dylraBEoXslWdFzGRmDukk68g2svCURUkINBtfAEy0%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -74,7 +72,7 @@
     </a>
     <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 87/100</p>
-    <p>Unleash the epic battles of Total War: WARHAMMER II now on sale for $14.99! Dive into a world of conquest and strategy with a Metacritic Score of 87/100. Command powerful armies, forge alliances, and conquer the Warhammer universe today. Don't miss out on this epic deal, save 75% off the original price!</p>
+    <p>Immerse yourself in epic battles and quests in Total War: WARHAMMER II. Command powerful armies, conquer new lands, and unleash magic in this highly acclaimed strategy game. With a Metacritic Score of 87/100, it's a steal at just $14.99 - that's a whopping 75% off the original price! Don't miss out on this incredible deal.</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=Ga%2FbXlOHiqWeqozFQEeIatwmUlnEv%2BeSf5jqPu9optc%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -85,7 +83,7 @@
     </a>
     <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 85/100</p>
-    <p>Embark on an epic journey of conquest and strategy in Total War: THREE KINGDOMS. Command legendary warlords, forge alliances, and dominate ancient China. With stunning visuals and immersive gameplay, this critically acclaimed title is a must-have for strategy fans. Get it now for only $14.99, 75% off the original price. Don't miss out on this incredible deal!</p>
+    <p>Immerse yourself in ancient China with Total War: THREE KINGDOMS. Command legendary warlords, forge alliances, and conquer your enemies in epic battles. With stunning visuals and strategic gameplay, this highly rated game is a must-have for any strategy enthusiast. Don't miss out on this incredible deal, get it now for only $14.99!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=lXt3D9Thp3gr4dvEFIL0kf%2FTtiDUIIKW0%2FCKCgzHv5c%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -96,7 +94,7 @@
     </a>
     <p><strong>Price:</strong> $10.00 <del>$39.99</del> (74% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
-    <p>Experience extreme sports like never before in 'Riders Republic'. Conquer massive multiplayer races, nail jaw-dropping tricks, and explore vast open-world landscapes. With a Metacritic score of 78/100, this adrenaline-pumping game is now on sale for just $10. Don't miss out on this epic deal!</p>
+    <p>Experience the adrenaline-fueled world of Riders Republic for only $10! Race, ski, and soar through massive multiplayer events with a Metacritic score of 78. Don't miss out on this epic adventure at 74% off!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=dk75xRfZ1e%2BzNhcZ3Vr0a%2Fkno2ZK24QrgDKoT9xmXmo%3D" target="_blank">Buy now on GreenManGaming →</a></p>
 </div>
 
@@ -107,7 +105,7 @@
     </a>
     <p><strong>Price:</strong> $10.49 <del>$34.99</del> (70% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
-    <p>"Immerse yourself in a world of magic and strategy with 'Songs of Conquest'. Command your armies, explore vast lands, and conquer your enemies in this epic adventure. With a 70% discount, now's the perfect time to experience this critically acclaimed game with a Metacritic score of 78/100. Don't miss out on this limited-time offer for only $10.49!"</p>
+    <p>Embark on a musical fantasy adventure with Songs of Conquest. Command powerful armies, conquer kingdoms, and wield magic in this captivating strategy game. With a Metacritic score of 78/100, now is the perfect time to join the quest at 70% off for only $10.49. Don't miss this epic deal!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=9BubrHHW%2FFEQ7%2Bz1f%2F0wyDA0vXA7Zst5VJaRMBFiXfI%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -118,7 +116,7 @@
     </a>
     <p><strong>Price:</strong> $11.99 <del>$39.99</del> (70% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 71/100</p>
-    <p>Unleash chaos in Shadow Warrior 3, now on sale for just $11.99! With intense action, breathtaking visuals, and a Metacritic score of 71/100, this adrenaline-pumping experience is a must-play for gamers who crave a wild adventure. Save 70% and dive into the ultimate thrill ride today!</p>
+    <p>Embark on an adrenaline-fueled journey in Shadow Warrior 3! Save 70% today and immerse yourself in fast-paced action, stunning visuals, and epic boss battles. With a Metacritic Score of 71/100, don't miss out on this thrilling experience for only $11.99!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=PGovWlbJPNEEXokxsGL2mZe8b4fdeN00HPoSvEqMGfw%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -129,7 +127,7 @@
     </a>
     <p><strong>Price:</strong> $19.79 <del>$59.99</del> (67% off)</p>
     <p><strong>Rating:</strong> Steam Rating: 87% (Very Positive)</p>
-    <p>Unleash the power of Mega Man in the Battle Network Legacy Collection! Dive into vol. 1 and vol. 2 for endless action-packed battles and nostalgic fun. With a Steam rating of 87% Very Positive, don't miss the chance to grab this epic collection on sale now for only $19.79. It's time to save the cyberworld!</p>
+    <p>Experience the ultimate nostalgia trip with Mega Man Battle Network Legacy Collection (Vol.1 and Vol.2)! Dive into this classic RPG series, now at an unbeatable price of $19.79. Immerse yourself in the world of viruses, net navis, and intense battles. Don't miss out on this epic deal with a Steam Rating of 87%!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=e4NlGvBUDhRe6FopkekOddW8EcC6DXB1roCW%2BZsOmq4%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -140,7 +138,7 @@
     </a>
     <p><strong>Price:</strong> $13.99 <del>$39.99</del> (65% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
-    <p>Experience the futuristic thrills of 'System Shock' for only $13.99! With a Metacritic score of 78/100, this immersive game offers intense action and rich storytelling. Don't miss out on this 65% off deal! Upgrade your gaming experience today.</p>
+    <p>Dive into the immersive world of System Shock for just $13.99! Uncover the secrets of a futuristic space station as you battle your way through hordes of mutants and robots. With a Metacritic Score of 78/100, don't miss this deal at 65% off the original price!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=Y%2FrHBfY1aVL4vpTQth85SJ3QVSHX2JVxMjv2RGn%2B8C0%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
@@ -151,7 +149,7 @@
     </a>
     <p><strong>Price:</strong> $13.99 <del>$34.99</del> (60% off)</p>
     <p><strong>Rating:</strong> Metacritic Score: 75/100</p>
-    <p>Immerse yourself in the heart of WWII with Classified: France 44. Uncover secrets, make tough choices, and embark on thrilling missions in this suspenseful narrative-driven game. With a Metacritic score of 75/100, now is the time to experience the adventure for yourself at 60% off, for only $13.99!</p>
+    <p>Immerse yourself in the intense action of WWII with Classified: France 44. Fight through the chaos of war in this gripping first-person shooter. With a Metacritic Score of 75/100, now is the perfect time to experience the adrenaline-pumping gameplay for only $13.99 (60% off!). Don't miss out on this epic deal!</p>
     <p><a href="https://www.cheapshark.com/redirect?dealID=hldSIf31lAbKHt7mLeP5ne3VKDYaFsmtqRoJCtbSPRE%3D" target="_blank">Buy now on Humble Store →</a></p>
 </div>
 
