@@ -1,143 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steal Deals — Top Game Discounts</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #0d0d0d;
-      color: #e0e0e0;
-      font-family: "Segoe UI", Roboto, sans-serif;
-      line-height: 1.6;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 350px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      color: white;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-image: url("https://cdn.cloudflare.steamstatic.com/steam/apps/214950/header.jpg"),
-                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/364360/header.jpg"),
-                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/594570/header.jpg"),
-                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/779340/header.jpg"),
-                        url("https://cdn.cloudflare.steamstatic.com/steam/apps/2290180/header.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      filter: brightness(0.4) blur(6px);
-      transform: scale(1.1);
-      z-index: 0;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 0 20px;
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      margin: 0;
-      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-    }
-
-    .hero p {
-      margin-top: 10px;
-      font-size: 1.2em;
-      color: #ccc;
-    }
-
-    /* MAIN CONTENT */
-    .content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .post {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 40px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    }
-
-    .post img {
-      width: 100%;
-      border-radius: 6px;
-    }
-
-    h2 {
-      color: #fff;
-      margin-top: 1em;
-    }
-
-    a {
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    del {
-      color: #777;
-    }
-
-    .footer {
-      text-align: center;
-      color: #888;
-      margin-top: 60px;
-      padding-bottom: 40px;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #333;
-      margin: 40px 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Steal Deals — Top Game Discounts Updated Daily. Save big on Steam and other stores.">
+    <meta name="keywords" content="game deals, cheap games, steam discounts, gaming sales, steal deals">
+    <meta name="author" content="Stan Bytes">
+    <title>Steal Deals — Top Game Discounts</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #1e1e1e;
+            padding: 1.5em;
+            text-align: center;
+            border-bottom: 3px solid #ff4655;
+        }
+        header h1 {
+            margin: 0;
+            color: #ff4655;
+            font-size: 2em;
+        }
+        main {
+            padding: 1.5em;
+            max-width: 900px;
+            margin: auto;
+        }
+        .update-date {
+            text-align: center;
+            margin-bottom: 1em;
+            color: #bbb;
+        }
+        .post {
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 1.2em;
+            margin-bottom: 1.5em;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .post img {
+            width: 100%;
+            border-radius: 10px;
+            margin: 0.5em 0;
+            transition: transform 0.2s ease-in-out;
+        }
+        .post img:hover {
+            transform: scale(1.03);
+        }
+        h2 {
+            color: #ff4655;
+            font-size: 1.4em;
+            margin-bottom: 0.3em;
+        }
+        a {
+            color: #00b0ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            line-height: 1.5em;
+        }
+        footer {
+            text-align: center;
+            padding: 2em 1em;
+            font-size: 0.9em;
+            color: #999;
+            border-top: 1px solid #333;
+            background-color: #0f0f0f;
+        }
+        footer strong {
+            color: #ff4655;
+        }
+    </style>
 </head>
 <body>
-  <!-- HERO HEADER -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Top Steal Deals Right Now</h1>
-      <p>Updated October 14, 2025 • Gamer-curated savings • No ads. No nonsense.</p>
-    </div>
-  </section>
-
-  <!-- CONTENT SECTION -->
-  <div class="content">
-    <div class="post">
-      <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/214950/header.jpg" alt="Total War Rome II Emperor Edition Cover">
-      <h2>Total War Rome II Emperor Edition</h2>
-      <p><strong>Price:</strong> $11.99 <del>$59.99</del> (80% off)</p>
-      <p><strong>Rating:</strong> Steam Rating: 85% (Very Positive)</p>
-      <p>Step into the epic world of ancient Rome with <em>Total War Rome II Emperor Edition</em>. Command armies, build cities, and conquer empires in this award-winning strategy game. Get it now at 80% off for only $11.99 on Steam.</p>
-      <p><a href="https://www.cheapshark.com/redirect?dealID=CogdN2fzrvlYoaYTfNFh2R%2FW2g12PbMnQhVIaexCHd8%3D" target="_blank">Buy now on Humble Store →</a></p>
-    </div>
-
-    <hr>
-    <div class="footer">
-      <p><strong>Ads ruin experiences. Ban ads, not fun.</strong></p>
-    </div>
-  </div>
+    <header>
+        <h1>Top Steal Deals Right Now</h1>
+    </header>
+    <main>
+        <p class="update-date">Updated on October 14, 2025</p>
+    
+        <div class="post">
+            <h2>Total War Rome II Emperor Edition</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=CogdN2fzrvlYoaYTfNFh2R%2FW2g12PbMnQhVIaexCHd8%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/214950/header.jpg" alt="Total War Rome II Emperor Edition Cover">
+            </a>
+            <p><strong>Price:</strong> $11.99 <del>$59.99</del> (80% off)</p>
+            <p><strong>Rating:</strong> Steam Rating: 85% (Very Positive)</p>
+            <p>Lead your empire to glory in Total War Rome II Emperor Edition! Command legions, conquer lands, and shape history in this epic strategy game. With an 85% Very Positive rating on Steam and currently 80% off at just $11.99, it's time to rewrite the fate of Rome. Engage in intense battles and cunning diplomacy to become the ultimate emperor!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=CogdN2fzrvlYoaYTfNFh2R%2FW2g12PbMnQhVIaexCHd8%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Total War: WARHAMMER</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=7dylraBEoXslWdFzGRmDukk68g2svCURUkINBtfAEy0%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/364360/header.jpg" alt="Total War: WARHAMMER Cover">
+            </a>
+            <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 86/100</p>
+            <p>Unleash epic battles, conquer empires, and command powerful armies in Total War: WARHAMMER. Dive into a rich fantasy world where strategy meets warfare. With a Metacritic score of 86/100, now's the perfect time to experience the thrill for only $14.99 - that's 75% off the original price. Don't miss out on this epic deal!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=7dylraBEoXslWdFzGRmDukk68g2svCURUkINBtfAEy0%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Total War: WARHAMMER II</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=Ga%2FbXlOHiqWeqozFQEeIatwmUlnEv%2BeSf5jqPu9optc%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/594570/header.jpg" alt="Total War: WARHAMMER II Cover">
+            </a>
+            <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 87/100</p>
+            <p>Immerse yourself in epic battles and strategic warfare in Total War: WARHAMMER II. Command powerful armies, conquer the fantasy world, and shape its fate. With a Metacritic Score of 87/100, this game is a must-have for strategy enthusiasts. Grab it now for $14.99 and experience the thrill of war at 75% off!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=Ga%2FbXlOHiqWeqozFQEeIatwmUlnEv%2BeSf5jqPu9optc%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Total War: THREE KINGDOMS</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=lXt3D9Thp3gr4dvEFIL0kf%2FTtiDUIIKW0%2FCKCgzHv5c%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/779340/header.jpg" alt="Total War: THREE KINGDOMS Cover">
+            </a>
+            <p><strong>Price:</strong> $14.99 <del>$59.99</del> (75% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 85/100</p>
+            <p>Immerse yourself in the epic saga of ancient China with Total War: THREE KINGDOMS. Command your armies, forge alliances, and conquer your enemies in this critically acclaimed strategy game. Don't miss out on the limited-time offer of $14.99, 75% off the original price. Get ready to rewrite history!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=lXt3D9Thp3gr4dvEFIL0kf%2FTtiDUIIKW0%2FCKCgzHv5c%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Riders Republic</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=dk75xRfZ1e%2BzNhcZ3Vr0a%2Fkno2ZK24QrgDKoT9xmXmo%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2290180/header.jpg" alt="Riders Republic Cover">
+            </a>
+            <p><strong>Price:</strong> $10.00 <del>$39.99</del> (74% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
+            <p>Experience the thrill of extreme sports in Riders Republic! Race, ride, and compete in massive open-world environments with friends. With a Metacritic score of 78/100, this high-paced adventure is a steal at just $10.00 - that's 74% off! Don't miss out on this adrenaline-fueled action-packed game.</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=dk75xRfZ1e%2BzNhcZ3Vr0a%2Fkno2ZK24QrgDKoT9xmXmo%3D" target="_blank">Buy now on GreenManGaming →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Songs of Conquest</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=9BubrHHW%2FFEQ7%2Bz1f%2F0wyDA0vXA7Zst5VJaRMBFiXfI%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/867210/header.jpg" alt="Songs of Conquest Cover">
+            </a>
+            <p><strong>Price:</strong> $10.49 <del>$34.99</del> (70% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
+            <p>Unleash your tactical skills in Songs of Conquest, now on sale for $10.49! Command powerful armies, explore a vast world, and delve into epic quests. With a Metacritic score of 78/100, this is your chance to save 70% on a top-rated strategy game. Get ready for an unforgettable adventure!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=9BubrHHW%2FFEQ7%2Bz1f%2F0wyDA0vXA7Zst5VJaRMBFiXfI%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Shadow Warrior 3</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=PGovWlbJPNEEXokxsGL2mZe8b4fdeN00HPoSvEqMGfw%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/None/header.jpg" alt="Shadow Warrior 3 Cover">
+            </a>
+            <p><strong>Price:</strong> $11.99 <del>$39.99</del> (70% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 71/100</p>
+            <p>Experience the adrenaline-pumping action of 'Shadow Warrior 3' for only $11.99! Slash, shoot, and slice your way through hordes of enemies in this fast-paced, high-energy game. With a Metacritic score of 71/100, don't miss out on this epic 70% off deal. Grab your katana and get ready to unleash your inner warrior!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=PGovWlbJPNEEXokxsGL2mZe8b4fdeN00HPoSvEqMGfw%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Mega Man Battle Network Legacy Collection (Vol.1 and Vol.2)</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=e4NlGvBUDhRe6FopkekOddW8EcC6DXB1roCW%2BZsOmq4%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/794039/header.jpg" alt="Mega Man Battle Network Legacy Collection (Vol.1 and Vol.2) Cover">
+            </a>
+            <p><strong>Price:</strong> $19.79 <del>$59.99</del> (67% off)</p>
+            <p><strong>Rating:</strong> Steam Rating: 87% (Very Positive)</p>
+            <p>Experience the iconic Mega Man Battle Network series like never before with the Legacy Collection Vol.1 and Vol.2! Dive into the futuristic world of cybernetic battles and save the day with your favorite NetNavi. With a Steam rating of 87%, this sale won't last long - get it now for only $19.79!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=e4NlGvBUDhRe6FopkekOddW8EcC6DXB1roCW%2BZsOmq4%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>System Shock</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=Y%2FrHBfY1aVL4vpTQth85SJ3QVSHX2JVxMjv2RGn%2B8C0%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/482400/header.jpg" alt="System Shock Cover">
+            </a>
+            <p><strong>Price:</strong> $13.99 <del>$39.99</del> (65% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 78/100</p>
+            <p>Immerse yourself in the critically acclaimed cyberpunk world of System Shock! With a Metacritic score of 78/100, this thrilling game is now on sale for $13.99 (65% off). Explore a futuristic universe filled with danger and mystery. Don't miss out on this incredible deal - get your copy now!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=Y%2FrHBfY1aVL4vpTQth85SJ3QVSHX2JVxMjv2RGn%2B8C0%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+        <div class="post">
+            <h2>Classified: France 44</h2>
+            <a href="https://www.cheapshark.com/redirect?dealID=hldSIf31lAbKHt7mLeP5ne3VKDYaFsmtqRoJCtbSPRE%3D" target="_blank">
+                <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2085370/header.jpg" alt="Classified: France 44 Cover">
+            </a>
+            <p><strong>Price:</strong> $13.99 <del>$34.99</del> (60% off)</p>
+            <p><strong>Rating:</strong> Metacritic Score: 75/100</p>
+            <p>Immerse yourself in the intense action of Classified: France 44! With a Metacritic score of 75/100, this WWII strategy game offers thrilling gameplay and stunning visuals. Get it now for only $13.99 - that's 60% off the original price of $34.99. Don't miss out on this epic deal!</p>
+            <p><a href="https://www.cheapshark.com/redirect?dealID=hldSIf31lAbKHt7mLeP5ne3VKDYaFsmtqRoJCtbSPRE%3D" target="_blank">Buy now on Humble Store →</a></p>
+        </div>
+        
+    </main>
+    <footer>
+        <p><strong>Ads ruin experiences.</strong> Ban ads, not fun. <br> &copy; 2025 Steal Deals by Stan Bytes.</p>
+    </footer>
 </body>
 </html>
